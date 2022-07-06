@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assets.Scripts.Utils;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
-    abstract class Enemy : MonoBehaviour
+    abstract class Enemy : Damageable
     {
         [SerializeField] private Sprite _sprite;
     }
