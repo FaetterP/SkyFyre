@@ -9,24 +9,5 @@ namespace Assets.Scripts.Enemies
         {
             _health = 7;
         }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log(123);
-            PlayerProjectile projectile = collision.gameObject.GetComponent<PlayerProjectile>();
-            if (projectile == null) return;
-
-            ApplyDamage(1);
-        }
-
-        protected override void OnDamage()
-        {
-            Debug.Log(_health);
-        }
-
-        protected override void OnDeath()
-        {
-            Destroy(gameObject);
-        }
     }
 }

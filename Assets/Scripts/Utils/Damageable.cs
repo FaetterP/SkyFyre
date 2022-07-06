@@ -11,7 +11,7 @@ namespace Assets.Scripts.Utils
             _health -= damage;
             OnDamage();
 
-            if (_health < 0)
+            if (_health <= 0)
             {
                 OnDeath();
             }
