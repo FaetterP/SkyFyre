@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Enemies;
-using UnityEngine;
 using Assets.Scripts.Utils;
 using System.Collections;
+using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
@@ -10,12 +10,17 @@ namespace Assets.Scripts.Player
     {
         [SerializeField] private Transform _projectileSpawn;
         [SerializeField] private PlayerProjectile _projectile;
+        [SerializeField] private float _shotsPerSecond = 10;
         private Animator _thisAnimator;
+
+        private float _delay;
+        private float _currentDelay;
 
         private void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
             _health = 80;
+            _delay = 1 / _shotsPerSecond;
         }
 
         private void Update()
@@ -23,8 +28,13 @@ namespace Assets.Scripts.Player
             Vector2 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = vec;
 
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (_currentDelay > 0)
             {
+                _currentDelay -= Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.Mouse0))
+            {
+                _currentDelay = _delay;
                 Instantiate(_projectile, _projectileSpawn.position, Quaternion.identity);
             }
         }
