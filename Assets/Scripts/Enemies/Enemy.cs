@@ -8,6 +8,11 @@ namespace Assets.Scripts.Enemies
     [RequireComponent(typeof(Animator))]
     abstract class Enemy : Damageable
     {
+        protected int _contactDamage;
+
+        [SerializeField] private EnemyEndPoint _endPoint;
+        private Animator _thisAnimator;
+        
         public int ContactDamage
         {
             get
@@ -15,9 +20,6 @@ namespace Assets.Scripts.Enemies
                 return _contactDamage;
             }
         }
-        protected int _contactDamage;
-
-        private Animator _thisAnimator;
 
         protected void Awake()
         {
@@ -48,7 +50,7 @@ namespace Assets.Scripts.Enemies
 
         protected override void OnDeath()
         {
-            Destroy(gameObject);
+            Destroy(_endPoint.gameObject);
         }
     }
 }
