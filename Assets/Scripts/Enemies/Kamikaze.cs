@@ -3,11 +3,14 @@ using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
-    class Enemy0 : Enemy
+    class Kamikaze : Enemy
     {
+        [SerializeField] private int _enemyHealth;
+        [SerializeField] private int _contectDamage;
+
         private new void Awake()
         {
-            _health = 7;
+            _health = _enemyHealth;
 
             base.Awake();
         }

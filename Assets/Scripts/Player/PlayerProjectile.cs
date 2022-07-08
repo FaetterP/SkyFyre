@@ -9,15 +9,17 @@ namespace Assets.Scripts.Player
 
         private void Update()
         {
-            transform.localPosition += new Vector3(1, 0, 0) * Time.deltaTime * _speed;
+            transform.Translate(new Vector2(Time.deltaTime * _speed, 0));
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            if (enemy == null) return;
-
-            Destroy(gameObject);
+            if (enemy != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
     }
 }
