@@ -1,15 +1,13 @@
-﻿using Assets.Scripts.Enemies;
+﻿using Assets.Scripts.Stage;
 using UnityEngine;
 
-namespace Assets.Scripts.Stage
+namespace Assets.Scripts.Enemies.Spawners
 {
-    class EnemySpawner : MonoBehaviour
+    class EnemySpawner : Spawner
     {
-        [SerializeField] private EnemyEndPoint _enemyEndPoint;
         [SerializeField] private Vector2 _position;
 
-
-        public void Spawn(Wave wave)
+        public override void Spawn(Wave wave)
         {
             EnemyEndPoint spawned = Instantiate(_enemyEndPoint, _position, Quaternion.identity);
             spawned.Init(wave);
