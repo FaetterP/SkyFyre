@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 6035172048671780169}
   - component: {fileID: 6035172048671780168}
   - component: {fileID: 6035172048671780279}
-  - component: {fileID: 6035172048671780278}
+  - component: {fileID: 7368836672462064766}
   m_Layer: 0
   m_Name: Triple1
   m_TagString: Untagged
@@ -175,7 +175,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6035172048671780278
+--- !u!114 &7368836672462064766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,11 +184,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6035172048671780277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386db931f7aa2764fa74844c8524ce6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58377861c2a1e3a49b5d199b00310542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _endPoint: {fileID: 6035172049177348982}
-  _enemyHealth: 50
+  _enemyHealth: 5
   _contectDamage: 1
 --- !u!1 &6035172049177348980
 GameObject:

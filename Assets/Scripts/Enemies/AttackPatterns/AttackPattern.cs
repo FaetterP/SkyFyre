@@ -1,12 +1,19 @@
-﻿using Assets.Scripts.Utils;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using static Assets.Scripts.Utils.Coroutines;
 
 namespace Assets.Scripts.Enemies.AttackPatterns
 {
     abstract class AttackPattern : MonoBehaviour
     {
-        protected Cor[] _attacks;
+        protected AttackCoroutine[] _attacks;
+        private List<EnemyProjectile> _projectiles;
+
+        protected void Awake()
+        {
+            _projectiles = new List<EnemyProjectile>();
+        }
 
         private void Start()
         {
@@ -17,7 +24,15 @@ namespace Assets.Scripts.Enemies.AttackPatterns
         {
             for (int i = 0; ; i = (i + 1) % _attacks.Length)
             {
-                yield return _attacks[i]();
+                yield return _attacks[i](_projectiles);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            foreach (EnemyProjectile projectile in _projectiles)
+            {
+                projectile.DefeatDestroy();
             }
         }
     }
