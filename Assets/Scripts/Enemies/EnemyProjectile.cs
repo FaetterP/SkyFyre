@@ -4,11 +4,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.Enemies
 {
-    [RequireComponent(typeof(Renderer))]
     class EnemyProjectile : MonoBehaviour
     {
         [SerializeField] private GameObject _drop;
-        private Renderer _thisRenderer;
         private int _contactDamage = 5;
         private List<EnemyProjectile> _list;
 
@@ -18,11 +16,6 @@ namespace Assets.Scripts.Enemies
             {
                 return _contactDamage;
             }
-        }
-
-        private void Awake()
-        {
-            _thisRenderer = GetComponent<Renderer>();
         }
 
         public void Init(List<EnemyProjectile> list)
@@ -41,15 +34,15 @@ namespace Assets.Scripts.Enemies
             }
         }
 
+        private void OnBecameInvisible()
+        {
+            _list.Remove(this);
+            Destroy(gameObject);
+        }
+
         private void Update()
         {
             transform.Translate(new Vector2(1, 0));
-
-            if (_thisRenderer.isVisible == false)
-            {
-                _list.Remove(this);
-                Destroy(gameObject);
-            }
         }
 
         public void DefeatDestroy()
