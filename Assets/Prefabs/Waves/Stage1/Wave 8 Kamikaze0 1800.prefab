@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2731516326176427198}
   - component: {fileID: 2731516326176427137}
   m_Layer: 0
-  m_Name: Wave 8 Kamikaze0
+  m_Name: Wave 8 Kamikaze0 1800
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpawners:
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
-  - {fileID: 5662450145943967720, guid: 91e47201b5069914d8e43738c1184545, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
+  - {fileID: 5662450145943967720, guid: ce941e8db42a33748a5dd47ab4035e31, type: 3}
