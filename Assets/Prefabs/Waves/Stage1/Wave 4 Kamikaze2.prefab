@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3631285685418503859
+--- !u!1 &4616937739504166928
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3631285685418503861}
-  - component: {fileID: 3631285685418503858}
+  - component: {fileID: 4616937739504166958}
+  - component: {fileID: 4616937739504166929}
   m_Layer: 0
-  m_Name: Spawner Kamikaze1
+  m_Name: Wave 4 Kamikaze2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3631285685418503861
+--- !u!4 &4616937739504166958
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631285685418503859}
+  m_GameObject: {fileID: 4616937739504166928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1024.8527, y: -70.82765, z: -1227.6964}
+  m_LocalPosition: {x: -1232.6543, y: -328.74368, z: -1227.6964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3631285685418503858
+--- !u!114 &4616937739504166929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631285685418503859}
+  m_GameObject: {fileID: 4616937739504166928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae1e5a496f403eb43878092d37f218b8, type: 3}
+  m_Script: {fileID: 11500000, guid: e5f51f73efcdec649a85f06527e7049e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyEndPoint: {fileID: 255444959817191929, guid: c5da27e8d5963fc48870c67caf89e19d, type: 3}
+  _enemySpawners:
+  - {fileID: 7235651101843401984, guid: 19b6db06e5c10ab4bba12e820e866465, type: 3}
+  - {fileID: 7235651101843401984, guid: 19b6db06e5c10ab4bba12e820e866465, type: 3}
+  - {fileID: 7235651101843401984, guid: 19b6db06e5c10ab4bba12e820e866465, type: 3}
+  - {fileID: 7235651101843401984, guid: 19b6db06e5c10ab4bba12e820e866465, type: 3}

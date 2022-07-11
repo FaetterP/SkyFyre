@@ -8,11 +8,11 @@ namespace Assets.Scripts.Enemies
     [RequireComponent(typeof(Animator))]
     abstract class Enemy : Damageable
     {
-        protected int _contactDamage;
-
         [SerializeField] private EnemyEndPoint _endPoint;
+        [SerializeField] protected int _contactDamage;
+        [SerializeField] protected int _experience;
         private Animator _thisAnimator;
-        
+
         public int ContactDamage
         {
             get

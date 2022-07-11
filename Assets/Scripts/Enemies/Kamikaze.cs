@@ -5,7 +5,6 @@ namespace Assets.Scripts.Enemies
     class Kamikaze : Enemy
     {
         [SerializeField] private int _enemyHealth;
-        [SerializeField] private int _contectDamage;
         [SerializeField] private float _speed;
         private float k, b;
         private static System.Random rnd = new System.Random();

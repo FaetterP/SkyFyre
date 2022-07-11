@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &206652185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4616937739504166928, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_Name
+      value: Wave 4 Kamikaze2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1261.9419
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -177.42474
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1227.6964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616937739504166958, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6546b821362d0494c9551617c0d4d29e, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,67 +263,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &715605548
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2731516326176427136, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_Name
-      value: Wave 8 Kamikaze1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427136, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 105.88847
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -17.113396
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1227.6964
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731516326176427198, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9a0fcdca325a65944bf86efed9404f38, type: 3}
 --- !u!1001 &1900140502
 PrefabInstance:
   m_ObjectHideFlags: 0
