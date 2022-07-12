@@ -4,14 +4,12 @@ namespace Assets.Scripts.Enemies
 {
     class Kamikaze : Enemy
     {
-        [SerializeField] private int _enemyHealth;
         [SerializeField] private float _speed;
         private float k, b;
         private static System.Random rnd = new System.Random();
 
         private new void Awake()
         {
-            _health = _enemyHealth;
             SolveKB(transform.position);
 
             base.Awake();
@@ -34,7 +32,7 @@ namespace Assets.Scripts.Enemies
             k = (to.y - from.y) / (to.x - from.x);
             b = from.y - k * from.x;
         }
-
+        
         private float FindY(float x)
         {
             return k * x + b;

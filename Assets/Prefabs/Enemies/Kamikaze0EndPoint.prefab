@@ -187,10 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386db931f7aa2764fa74844c8524ce6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 3
   _endPoint: {fileID: 4118257968759742114}
   _contactDamage: 1
   _experience: 1
-  _enemyHealth: 3
   _speed: 200
 --- !u!50 &963863934841064826
 Rigidbody2D:

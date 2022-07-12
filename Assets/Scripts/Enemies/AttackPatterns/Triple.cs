@@ -12,21 +12,20 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         private new void Awake()
         {
-            _attacks = new AttackCoroutine[] { Attack0, Attack0, Attack0, Attack1 };
+            _attacks = new AttackCoroutine[] { TripleShot, TripleShot, TripleShot, Pause };
 
             base.Awake();
         }
 
-        IEnumerator Attack0(List<EnemyProjectile> list)
+        IEnumerator TripleShot(List<EnemyProjectile> list)
         {
             Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 170)).Init(list);
             Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list);
             Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 190)).Init(list);
-            //Debug.Log(list.Count);
             yield return new WaitForSeconds(0.5f);
         }
 
-        IEnumerator Attack1(List<EnemyProjectile> list)
+        IEnumerator Pause(List<EnemyProjectile> list)
         {
             yield return new WaitForSeconds(0.5f);
         }

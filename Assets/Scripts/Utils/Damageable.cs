@@ -4,7 +4,7 @@ namespace Assets.Scripts.Utils
 {
     abstract class Damageable : MonoBehaviour
     {
-        protected int _health;
+        [SerializeField] protected int _health;
 
         public void ApplyDamage(int damage)
         {

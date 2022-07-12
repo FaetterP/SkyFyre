@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6035172048108933690}
   - component: {fileID: 6035172048108933689}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TripleAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,9 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58377861c2a1e3a49b5d199b00310542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 5
   _endPoint: {fileID: 6035172049177348982}
-  _enemyHealth: 5
-  _contectDamage: 1
+  _contactDamage: 1
+  _experience: 1
 --- !u!1 &6035172049177348980
 GameObject:
   m_ObjectHideFlags: 0
