@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Enemies.AttackPatterns;
+using Assets.Scripts.Player;
 using Assets.Scripts.Utils;
 using System.Collections;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Assets.Scripts.Enemies
     abstract class Enemy : Damageable
     {
         [SerializeField] protected int _contactDamage;
+        [SerializeField] private AttackPattern[] _attackPatterns;
         [SerializeField] protected int _experience;
         protected Animator _thisAnimator;
         private EnemyArgumentFunction d_removeFromList;
@@ -56,6 +58,10 @@ namespace Assets.Scripts.Enemies
 
         protected override void OnDeath()
         {
+            foreach(AttackPattern gun in _attackPatterns)
+            {
+                gun.Destroy();
+            }
             Destroy(gameObject);
         }
 

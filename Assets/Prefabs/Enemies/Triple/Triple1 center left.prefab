@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 5
   _contactDamage: 1
+  _attackPatterns:
+  - {fileID: 4587480907608504688}
   _experience: 1
   _lifeTime: 0
 --- !u!1 &4587480907608504689

@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 15
   _contactDamage: 0
+  _attackPatterns:
+  - {fileID: 1195047581852444873}
   _experience: 0
 --- !u!1 &1195047581852444855
 GameObject:

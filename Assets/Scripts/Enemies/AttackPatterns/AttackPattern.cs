@@ -28,7 +28,7 @@ namespace Assets.Scripts.Enemies.AttackPatterns
             }
         }
 
-        private void OnDestroy()
+        public void Destroy()
         {
             foreach (EnemyProjectile projectile in _projectiles)
             {
