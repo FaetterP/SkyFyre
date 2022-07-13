@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Utils;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Assets.Scripts.Utils.Delegates;
@@ -19,9 +18,9 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         IEnumerator TripleShot(List<EnemyProjectile> list)
         {
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 170)).Init(list);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 190)).Init(list);
+            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 170)).Init(list, _damage);
+            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list, _damage);
+            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 190)).Init(list, _damage);
             yield return new WaitForSeconds(0.5f);
         }
 

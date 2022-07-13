@@ -11,7 +11,8 @@ namespace Assets.Scripts.Enemies
     abstract class Enemy : Damageable
     {
         [SerializeField] protected int _contactDamage;
-        [SerializeField] private AttackPattern[] _attackPatterns;
+        [SerializeField] private int _projectileDamage;
+        [SerializeField] private AttackPattern[] _guns;
         [SerializeField] protected int _experience;
         protected Animator _thisAnimator;
         private EnemyArgumentFunction d_removeFromList;
@@ -27,6 +28,10 @@ namespace Assets.Scripts.Enemies
         protected void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
+            foreach (AttackPattern gun in _guns)
+            {
+                gun.Init(_projectileDamage);
+            }
         }
 
         public void Init(EnemyArgumentFunction removeFromList)
@@ -58,7 +63,7 @@ namespace Assets.Scripts.Enemies
 
         protected override void OnDeath()
         {
-            foreach(AttackPattern gun in _attackPatterns)
+            foreach (AttackPattern gun in _guns)
             {
                 gun.Destroy();
             }

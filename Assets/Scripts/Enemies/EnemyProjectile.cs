@@ -7,7 +7,7 @@ namespace Assets.Scripts.Enemies
     class EnemyProjectile : MonoBehaviour
     {
         [SerializeField] private GameObject _drop;
-        private int _contactDamage = 5;
+        private int _contactDamage;
         private List<EnemyProjectile> _list;
 
         public int ContactDamage
@@ -18,8 +18,9 @@ namespace Assets.Scripts.Enemies
             }
         }
 
-        public void Init(List<EnemyProjectile> list)
+        public void Init(List<EnemyProjectile> list, int damage)
         {
+            _contactDamage = damage;
             _list = list;
             _list.Add(this);
         }

@@ -8,11 +8,17 @@ namespace Assets.Scripts.Enemies.AttackPatterns
     abstract class AttackPattern : MonoBehaviour
     {
         protected AttackCoroutine[] _attacks;
+        protected int _damage;
         private List<EnemyProjectile> _projectiles;
 
         protected void Awake()
         {
             _projectiles = new List<EnemyProjectile>();
+        }
+
+        public void Init(int damage)
+        {
+            _damage = damage;
         }
 
         private void Start()

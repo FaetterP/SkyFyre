@@ -18,7 +18,7 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         IEnumerator SingleShot(List<EnemyProjectile> list)
         {
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list);
+            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list, _damage);
             yield return new WaitForSeconds(0.3f);
         }
 

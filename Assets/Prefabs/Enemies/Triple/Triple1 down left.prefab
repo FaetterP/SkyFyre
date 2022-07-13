@@ -145,7 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 5
   _contactDamage: 1
-  _attackPatterns:
+  _projectileDamage: 5
+  _guns:
   - {fileID: 1814788843074555003}
   _experience: 1
   _lifeTime: 0

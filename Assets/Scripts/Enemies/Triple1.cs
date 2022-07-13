@@ -9,7 +9,6 @@ namespace Assets.Scripts.Enemies
         private new void Awake()
         {
             _lifeTime = 0;
-
             base.Awake();
         }
 
