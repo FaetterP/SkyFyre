@@ -1,31 +1,27 @@
 ﻿using Assets.Scripts.Enemies;
-using Assets.Scripts.Enemies.Spawners;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Stage
 {
     class Wave : MonoBehaviour
     {
-        [SerializeField] private Spawner[] _enemySpawners;
-        private int _enemyCount;
-
-        private void Awake()
-        {
-            _enemyCount = _enemySpawners.Length;
-        }
+        [SerializeField] private List<Enemy> _enemies;
 
         private void Start()
         {
-            foreach(Spawner spawner in _enemySpawners)
+            foreach (Enemy enemy in _enemies)
             {
-                spawner.Spawn(this);
+                Enemy spawned = Instantiate(enemy);
+                spawned.Init(RemoveFromList);
             }
         }
 
-        public void DecreaseCount()
+        private void RemoveFromList(Enemy enemy)
         {
-            _enemyCount -= 1;
-            if (_enemyCount <= 0)
+            _enemies.Remove(enemy);
+
+            if (_enemies.Count == 0)
             {
                 Destroy(gameObject);
             }

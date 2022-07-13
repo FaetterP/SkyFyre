@@ -2,16 +2,17 @@
 using Assets.Scripts.Utils;
 using System.Collections;
 using UnityEngine;
+using static Assets.Scripts.Utils.Delegates;
 
 namespace Assets.Scripts.Enemies
 {
     [RequireComponent(typeof(Animator))]
     abstract class Enemy : Damageable
     {
-        [SerializeField] private EnemyEndPoint _endPoint;
         [SerializeField] protected int _contactDamage;
         [SerializeField] protected int _experience;
-        private Animator _thisAnimator;
+        protected Animator _thisAnimator;
+        private EnemyArgumentFunction d_removeFromList;
 
         public int ContactDamage
         {
@@ -24,6 +25,11 @@ namespace Assets.Scripts.Enemies
         protected void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
+        }
+
+        public void Init(EnemyArgumentFunction removeFromList)
+        {
+            d_removeFromList = removeFromList;
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -50,7 +56,12 @@ namespace Assets.Scripts.Enemies
 
         protected override void OnDeath()
         {
-            Destroy(_endPoint.gameObject);
+            Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            d_removeFromList(this);
         }
     }
 }

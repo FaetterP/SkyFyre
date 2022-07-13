@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Assets.Scripts.Utils.Coroutines;
+using static Assets.Scripts.Utils.Delegates;
 
 namespace Assets.Scripts.Enemies.AttackPatterns
 {
