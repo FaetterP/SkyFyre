@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Enemies;
+using Assets.Scripts.Gui;
 using Assets.Scripts.Utils;
 using System.Collections;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private PlayerProjectile _projectile;
         [SerializeField] private float _shotsPerSecond = 10;
         private Animator _thisAnimator;
+        private TextCreator _textCreator;
 
         private float _delay;
         private float _currentDelay;
@@ -19,8 +21,8 @@ namespace Assets.Scripts.Player
         private void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
-            _health = 80;
             _delay = 1 / _shotsPerSecond;
+            _textCreator = FindObjectOfType<TextCreator>();
         }
 
         private void Update()
@@ -44,6 +46,7 @@ namespace Assets.Scripts.Player
             EnemyProjectile projectile = collision.gameObject.GetComponent<EnemyProjectile>();
             if (projectile != null)
             {
+                _textCreator.Create(transform.position, projectile.ContactDamage);
                 ApplyDamage(projectile.ContactDamage);
                 return;
             }
@@ -54,6 +57,7 @@ namespace Assets.Scripts.Player
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
+                _textCreator.Create(transform.position, enemy.ContactDamage);
                 ApplyDamage(enemy.ContactDamage);
                 return;
             }

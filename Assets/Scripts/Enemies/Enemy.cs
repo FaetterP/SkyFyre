@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Enemies.AttackPatterns;
+using Assets.Scripts.Gui;
 using Assets.Scripts.Player;
 using Assets.Scripts.Utils;
 using System.Collections;
@@ -16,6 +17,7 @@ namespace Assets.Scripts.Enemies
         [SerializeField] protected int _experience;
         protected Animator _thisAnimator;
         private EnemyArgumentFunction d_removeFromList;
+        private TextCreator _textCreator;
 
         public int ContactDamage
         {
@@ -28,6 +30,7 @@ namespace Assets.Scripts.Enemies
         protected void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
+            _textCreator = FindObjectOfType<TextCreator>();
             foreach (AttackPattern gun in _guns)
             {
                 gun.Init(_projectileDamage);
@@ -44,6 +47,7 @@ namespace Assets.Scripts.Enemies
             PlayerProjectile projectile = collision.gameObject.GetComponent<PlayerProjectile>();
             if (projectile != null)
             {
+                _textCreator.Create(transform.position, 1);
                 ApplyDamage(1);
                 return;
             }
