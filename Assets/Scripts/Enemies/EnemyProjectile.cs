@@ -9,6 +9,7 @@ namespace Assets.Scripts.Enemies
         [SerializeField] private GameObject _drop;
         private int _contactDamage;
         private List<EnemyProjectile> _list;
+        private float _speed;
 
         public int ContactDamage
         {
@@ -18,9 +19,10 @@ namespace Assets.Scripts.Enemies
             }
         }
 
-        public void Init(List<EnemyProjectile> list, int damage)
+        public void Init(List<EnemyProjectile> list, int damage, float speed)
         {
             _contactDamage = damage;
+            _speed = speed;
             _list = list;
             _list.Add(this);
         }
@@ -43,7 +45,7 @@ namespace Assets.Scripts.Enemies
 
         private void Update()
         {
-            transform.Translate(new Vector2(1, 0));
+            transform.Translate(new Vector2(_speed * Time.deltaTime, 0));
         }
 
         public void DefeatDestroy()

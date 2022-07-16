@@ -1802,3 +1802,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
+--- !u!1001 &7276900283588225745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 315.5249
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 124.34546
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.802864
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856409342034169293, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885416722787863944, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}
+      propertyPath: m_Name
+      value: Wave Miniboss1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ceb3afc873a13f4db83597e2384339d, type: 3}

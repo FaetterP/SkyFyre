@@ -2,21 +2,20 @@
 
 namespace Assets.Scripts.Enemies
 {
-    class Triple1 : Enemy
+    class EnemyGoingOut : Enemy
     {
-        [SerializeField] private float _lifeTime;
+        [SerializeField] private float _timer;
 
         private new void Awake()
         {
-            _lifeTime = 0;
             base.Awake();
         }
 
         private void Update()
         {
-            _lifeTime += Time.deltaTime;
+            _timer -= Time.deltaTime;
 
-            if (_lifeTime >= 10)
+            if (_timer <=0)
             {
                 _thisAnimator.SetBool("isGoAway", true);
             }
