@@ -12,6 +12,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private Transform _projectileSpawn;
         [SerializeField] private PlayerProjectile _projectile;
         [SerializeField] private float _shotsPerSecond = 10;
+        [SerializeField] HealthBar _healthBar;
         private Animator _thisAnimator;
         private TextCreator _textCreator;
 
@@ -23,6 +24,7 @@ namespace Assets.Scripts.Player
             _thisAnimator = GetComponent<Animator>();
             _delay = 1 / _shotsPerSecond;
             _textCreator = FindObjectOfType<TextCreator>();
+            _healthBar.Init(_health);
         }
 
         private void Update()
@@ -48,6 +50,7 @@ namespace Assets.Scripts.Player
             {
                 _textCreator.Create(transform.position, projectile.ContactDamage);
                 ApplyDamage(projectile.ContactDamage);
+                _healthBar.setupValue(_health);
                 return;
             }
         }
@@ -59,6 +62,7 @@ namespace Assets.Scripts.Player
             {
                 _textCreator.Create(transform.position, enemy.ContactDamage);
                 ApplyDamage(enemy.ContactDamage);
+                _healthBar.setupValue(_health);
                 return;
             }
         }
