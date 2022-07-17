@@ -8,7 +8,6 @@ namespace Assets.Scripts.Enemies.AttackPatterns
     class MiniBoss1Attack : AttackPattern
     {
         [SerializeField] private float _speedProjectileWide;
-        [SerializeField] private EnemyProjectile _enemyProjectile;
 
         private new void Awake()
         {
@@ -22,7 +21,6 @@ namespace Assets.Scripts.Enemies.AttackPatterns
             for (int i = -3; i <= 3; i++)
             {
                 Vector3 angles = new Vector3(0, 0, 180 + i * (-10));
-                Debug.Log(angles);
                 Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(angles)).Init(list, _damage, _speedProjectile);
             }
 

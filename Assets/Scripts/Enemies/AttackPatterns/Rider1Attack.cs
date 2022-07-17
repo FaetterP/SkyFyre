@@ -7,8 +7,6 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 {
     class Rider1Attack : AttackPattern
     {
-        [SerializeField] private EnemyProjectile _enemyProjectile;
-
         private new void Awake()
         {
             _attacks = new AttackCoroutine[] { SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, CircleShot };

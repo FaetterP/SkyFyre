@@ -8,6 +8,7 @@ namespace Assets.Scripts.Enemies.AttackPatterns
     abstract class AttackPattern : MonoBehaviour
     {
         [SerializeField] protected float _speedProjectile;
+        [SerializeField] protected EnemyProjectile _enemyProjectile;
         protected AttackCoroutine[] _attacks;
         protected int _damage;
         private List<EnemyProjectile> _projectiles;

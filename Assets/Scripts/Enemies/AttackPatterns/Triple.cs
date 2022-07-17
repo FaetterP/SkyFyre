@@ -7,8 +7,6 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 {
     class Triple : AttackPattern
     {
-        [SerializeField] private EnemyProjectile _enemyProjectile;
-
         private new void Awake()
         {
             _attacks = new AttackCoroutine[] { TripleShot, TripleShot, TripleShot, Pause };
