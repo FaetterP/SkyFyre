@@ -7,6 +7,12 @@ namespace Assets.Scripts.Stage
     class Wave : MonoBehaviour
     {
         [SerializeField] private List<Enemy> _enemies;
+        private List<Enemy> _spawnedEnemies;
+
+        private void Awake()
+        {
+            _spawnedEnemies = new List<Enemy>();
+        }
 
         private void Start()
         {
@@ -14,14 +20,15 @@ namespace Assets.Scripts.Stage
             {
                 Enemy spawned = Instantiate(enemy);
                 spawned.Init(RemoveFromList);
+                _spawnedEnemies.Add(spawned);
             }
         }
 
         private void RemoveFromList(Enemy enemy)
         {
-            _enemies.Remove(enemy);
+            _spawnedEnemies.Remove(enemy);
 
-            if (_enemies.Count == 0)
+            if (_spawnedEnemies.Count == 0)
             {
                 Destroy(gameObject);
             }

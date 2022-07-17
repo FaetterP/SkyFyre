@@ -31,7 +31,6 @@ namespace Assets.Scripts.Enemies.AttackPatterns
         {
             for (int i = 0; ; i = (i + 1) % _attacks.Length)
             {
-                Debug.Log(_projectiles.Count);
                 yield return _attacks[i](_projectiles);
             }
         }
