@@ -11,7 +11,7 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         private new void Awake()
         {
-            _attacks = new AttackCoroutine[] { SingleShot, Pause };
+            _attacks = new AttackCoroutine[] { SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, SingleShot, CircleShot };
 
             base.Awake();
         }
@@ -19,12 +19,17 @@ namespace Assets.Scripts.Enemies.AttackPatterns
         IEnumerator SingleShot(List<EnemyProjectile> list)
         {
             Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list, _damage, _speedProjectile);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
         }
 
-        IEnumerator Pause(List<EnemyProjectile> list)
+        IEnumerator CircleShot(List<EnemyProjectile> list)
         {
-            yield return new WaitForSeconds(0.3f);
+            for (int i = 0; i < 16; i++)
+            {
+                Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 22.5f * i)).Init(list, _damage, _speedProjectile);
+            }
+
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }

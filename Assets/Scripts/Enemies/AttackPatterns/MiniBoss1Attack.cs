@@ -19,15 +19,13 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         IEnumerator NarrowShot(List<EnemyProjectile> list)
         {
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 150)).Init(list, _damage, _speedProjectile);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 160)).Init(list, _damage, _speedProjectile);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 170)).Init(list, _damage, _speedProjectile);
+            for (int i = -3; i <= 3; i++)
+            {
+                Vector3 angles = new Vector3(0, 0, 180 + i * (-10));
+                Debug.Log(angles);
+                Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(angles)).Init(list, _damage, _speedProjectile);
+            }
 
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 180)).Init(list, _damage, _speedProjectile);
-
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 190)).Init(list, _damage, _speedProjectile);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 200)).Init(list, _damage, _speedProjectile);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 210)).Init(list, _damage, _speedProjectile);
             yield return new WaitForSeconds(0.3f);
         }
 
@@ -38,17 +36,12 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         IEnumerator WideShot(List<EnemyProjectile> list)
         {
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 15 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 30 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 45 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 60 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 75 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 90 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 105 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 120 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 135 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 150 + 90)).Init(list, _damage, _speedProjectileWide);
-            Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(0, 0, 165 + 90)).Init(list, _damage, _speedProjectileWide);
+            for (int i = 0; i < 11; i++)
+            {
+                Vector3 angles = new Vector3(0, 0, 105 + 15 * i);
+                Instantiate(_enemyProjectile, transform.position, Quaternion.Euler(angles)).Init(list, _damage, _speedProjectileWide);
+            }
+
             yield return new WaitForSeconds(0.3f);
         }
     }
