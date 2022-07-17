@@ -8,5 +8,6 @@ namespace Assets.Scripts.Utils
     {
         public delegate IEnumerator AttackCoroutine(List<EnemyProjectile> list);
         public delegate void EnemyArgumentFunction(Enemy enemy);
+        public delegate void EmptyArgumentFunction();
     }
 }

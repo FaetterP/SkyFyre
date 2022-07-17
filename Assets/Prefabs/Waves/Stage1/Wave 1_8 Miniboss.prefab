@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7022779390347444753
+--- !u!1 &5885416722787863944
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7022779390347444755}
-  - component: {fileID: 7022779390347444752}
+  - component: {fileID: 856409342034169293}
+  - component: {fileID: 7983294431696555489}
   m_Layer: 0
-  m_Name: Wave Triple1 lrl
+  m_Name: Wave 1_8 Miniboss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7022779390347444755
+--- !u!4 &856409342034169293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7022779390347444753}
+  m_GameObject: {fileID: 5885416722787863944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 242.40797, y: 36.929176, z: -1191.4109}
+  m_LocalPosition: {x: 315.5249, y: 124.34546, z: -49.802864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7022779390347444752
+--- !u!114 &7983294431696555489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7022779390347444753}
+  m_GameObject: {fileID: 5885416722787863944}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5f51f73efcdec649a85f06527e7049e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 7881546747018574836, guid: b40d0bcf2824b284385734c69d3aa3b0, type: 3}
-  - {fileID: 2181582642656698167, guid: f05045d83a21b704a82fda7e594ceb4e, type: 3}
-  - {fileID: 1814788842487988100, guid: b70e741d4ab77d5499fe5df3ec3a156f, type: 3}
+  - {fileID: 248568766, guid: 915b61208bd24114393fc92cdf003956, type: 3}

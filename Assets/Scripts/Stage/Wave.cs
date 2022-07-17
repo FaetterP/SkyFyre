@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.Enemies;
 using System.Collections.Generic;
 using UnityEngine;
+using static Assets.Scripts.Utils.Delegates;
 
 namespace Assets.Scripts.Stage
 {
@@ -8,10 +9,16 @@ namespace Assets.Scripts.Stage
     {
         [SerializeField] private List<Enemy> _enemies;
         private List<Enemy> _spawnedEnemies;
+        private EmptyArgumentFunction _spawnNextWave;
 
         private void Awake()
         {
             _spawnedEnemies = new List<Enemy>();
+        }
+
+        public void Init(EmptyArgumentFunction spawnNextWave)
+        {
+            _spawnNextWave = spawnNextWave;
         }
 
         private void Start()
@@ -30,6 +37,7 @@ namespace Assets.Scripts.Stage
 
             if (_spawnedEnemies.Count == 0)
             {
+                _spawnNextWave();
                 Destroy(gameObject);
             }
         }
