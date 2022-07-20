@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedProjectile: 300
-  _speedProjectileWide: 200
   _enemyProjectile: {fileID: 2305286860657512788, guid: 8df9c645ac1a3ce418918de02de4002c, type: 3}
+  _speedProjectileWide: 200
 --- !u!1 &8607799611472464920
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,10 +189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58377861c2a1e3a49b5d199b00310542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 20
-  _contactDamage: 2
+  _health: 560
+  _contactDamage: 10
   _projectileDamage: 10
   _guns:
   - {fileID: 945800751}
-  _experience: 0
+  _experience: 20
   _timer: 100000

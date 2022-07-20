@@ -143,12 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58377861c2a1e3a49b5d199b00310542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
-  _contactDamage: 1
+  _health: 80
+  _contactDamage: 5
   _projectileDamage: 5
   _guns:
   - {fileID: 1814788843074555003}
-  _experience: 1
+  _experience: 8
   _timer: 10
 --- !u!1 &1814788843074555005
 GameObject:
@@ -193,5 +193,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760cefafa3cfaad479918103ba1d6443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyProjectile: {fileID: 2305286860657512788, guid: 8df9c645ac1a3ce418918de02de4002c, type: 3}
   _speedProjectile: 200
+  _enemyProjectile: {fileID: 2305286860657512788, guid: 8df9c645ac1a3ce418918de02de4002c, type: 3}

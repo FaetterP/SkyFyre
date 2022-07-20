@@ -143,12 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62e3cea69bb87f4ca5218b1e3a77b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 15
-  _contactDamage: 0
-  _projectileDamage: 8
+  _health: 120
+  _contactDamage: 5
+  _projectileDamage: 5
   _guns:
   - {fileID: 2946644201541247639}
-  _experience: 0
+  _experience: 14
 --- !u!1 &2946644201541247637
 GameObject:
   m_ObjectHideFlags: 0

@@ -188,10 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58377861c2a1e3a49b5d199b00310542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 20
-  _contactDamage: 0
-  _projectileDamage: 7
+  _health: 60
+  _contactDamage: 5
+  _projectileDamage: 5
   _guns:
   - {fileID: 6833543976203743631}
-  _experience: 0
+  _experience: 10
   _timer: 10
