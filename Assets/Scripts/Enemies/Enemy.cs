@@ -13,7 +13,7 @@ namespace Assets.Scripts.Enemies
     {
         [SerializeField] protected int _contactDamage;
         [SerializeField] private int _projectileDamage;
-        [SerializeField] private AttackPattern[] _guns;
+        [SerializeField] protected AttackPattern[] _guns;
         [SerializeField] protected int _experience;
         protected Animator _thisAnimator;
         private EnemyArgumentFunction d_removeFromList;
@@ -47,8 +47,8 @@ namespace Assets.Scripts.Enemies
             PlayerProjectile projectile = collision.gameObject.GetComponent<PlayerProjectile>();
             if (projectile != null)
             {
-                _textCreator.Create(transform.position, 1);
-                ApplyDamage(1);
+                _textCreator.Create(transform.position, projectile.Damage);
+                ApplyDamage(projectile.Damage);
                 return;
             }
         }

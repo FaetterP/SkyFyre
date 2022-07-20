@@ -6,6 +6,14 @@ namespace Assets.Scripts.Player
     class PlayerProjectile : MonoBehaviour
     {
         [SerializeField] private float _speed = 150;
+        [SerializeField] private int _damage;
+        public int Damage
+        {
+            get
+            {
+                return _damage;
+            }
+        }
 
         private void OnBecameInvisible()
         {
