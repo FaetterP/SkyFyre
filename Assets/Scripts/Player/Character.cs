@@ -29,18 +29,19 @@ namespace Assets.Scripts.Player
 
         private void Update()
         {
-            Vector2 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = vec;
-
-            if (_currentDelay > 0)
+            Vector2 vec;
+            if (Input.touchCount > 0)
             {
-                _currentDelay -= Time.deltaTime;
+                Touch touch = Input.GetTouch(0);
+                vec = touch.position;
             }
-            else if (Input.GetKey(KeyCode.Mouse0))
+            else
             {
-                _currentDelay = _delay;
-                Instantiate(_projectile, _projectileSpawn.position, Quaternion.identity);
+                vec = Input.mousePosition;
             }
+            Vector2 position = Camera.main.ScreenToWorldPoint(vec);
+            transform.position = position;
+            TryShot();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -82,6 +83,19 @@ namespace Assets.Scripts.Player
         protected override void OnDeath()
         {
             Destroy(gameObject);
+        }
+
+        private void TryShot()
+        {
+            if (_currentDelay > 0)
+            {
+                _currentDelay -= Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.Mouse0) || Input.touchCount > 0)
+            {
+                _currentDelay = _delay;
+                Instantiate(_projectile, _projectileSpawn.position, Quaternion.identity);
+            }
         }
     }
 }
