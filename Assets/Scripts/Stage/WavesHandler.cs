@@ -2,9 +2,10 @@
 
 namespace Assets.Scripts.Stage
 {
-    class LoaderStage : MonoBehaviour
+    class WavesHandler : MonoBehaviour
     {
-        [SerializeField] private LoaderBackgrounds _loaderBackgrounds;
+        public static WavesHandler CurrentLoader;
+
         [SerializeField] private Wave[] _waves;
         private int _indexWave;
 
