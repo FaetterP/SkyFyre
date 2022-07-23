@@ -26,7 +26,14 @@ namespace Assets.Scripts.Stage
             foreach (Enemy enemy in _enemies)
             {
                 Enemy spawned = Instantiate(enemy);
-                spawned.Init(RemoveFromList);
+                if (spawned is Boss)
+                {
+                    (spawned as Boss).Init(SpawnNextWave);
+                }
+                else
+                {
+                    spawned.Init(RemoveFromList);
+                }
                 _spawnedEnemies.Add(spawned);
             }
         }
@@ -40,6 +47,13 @@ namespace Assets.Scripts.Stage
                 _spawnNextWave();
                 Destroy(gameObject);
             }
+        }
+
+        private void SpawnNextWave()
+        {
+            _spawnNextWave();
+            Destroy(gameObject);
+
         }
     }
 }

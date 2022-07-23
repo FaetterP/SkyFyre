@@ -1,11 +1,18 @@
 ﻿using Assets.Scripts.Enemies.AttackPatterns;
 using UnityEngine;
+using static Assets.Scripts.Utils.Delegates;
 
 namespace Assets.Scripts.Enemies
 {
     class Boss : Enemy
     {
-        [SerializeField] private Enemy _nextPhase;
+        [SerializeField] private Boss _nextPhase;
+        private EmptyArgumentFunction d_spawnNextWave;
+
+        public void Init(EmptyArgumentFunction spawnNexWave)
+        {
+            d_spawnNextWave = spawnNexWave;
+        }
 
         protected override void OnDeath()
         {
@@ -14,9 +21,13 @@ namespace Assets.Scripts.Enemies
                 gun.Destroy();
             }
 
-            if (_nextPhase != null)
+            if (_nextPhase == null)
             {
-                Instantiate(_nextPhase, transform.position, Quaternion.identity);
+                d_spawnNextWave();
+            }
+            else
+            {
+                Instantiate(_nextPhase, transform.position, Quaternion.identity).Init(d_spawnNextWave);
             }
 
             Destroy(gameObject);
