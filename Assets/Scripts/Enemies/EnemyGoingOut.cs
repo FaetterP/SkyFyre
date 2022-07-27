@@ -15,10 +15,15 @@ namespace Assets.Scripts.Enemies
         {
             _timer -= Time.deltaTime;
 
-            if (_timer <=0)
+            if (_timer <= 0)
             {
                 _thisAnimator.SetBool("isGoAway", true);
             }
+        }
+
+        private void OnWentOut()
+        {
+            Destroy(gameObject);
         }
     }
 }
