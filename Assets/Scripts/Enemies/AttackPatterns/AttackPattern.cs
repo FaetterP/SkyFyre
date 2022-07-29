@@ -38,6 +38,7 @@ namespace Assets.Scripts.Enemies.AttackPatterns
 
         public void Destroy()
         {
+            if (_projectiles == null) { return; }
             foreach (EnemyProjectile projectile in _projectiles)
             {
                 projectile.DefeatDestroy();

@@ -7,7 +7,16 @@ namespace Assets.Scripts.Enemies
     class Boss : Enemy
     {
         [SerializeField] private Boss _nextPhase;
+        [SerializeField] private bool _startImmediately;
         private EmptyArgumentFunction d_spawnNextWave;
+
+        private void Start()
+        {
+            if (_startImmediately)
+            {
+                StartAttack();
+            }
+        }
 
         public void Init(EmptyArgumentFunction spawnNexWave)
         {

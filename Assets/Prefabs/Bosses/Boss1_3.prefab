@@ -195,3 +195,4 @@ MonoBehaviour:
   - {fileID: 3728066412914395502}
   _experience: 50
   _nextPhase: {fileID: 0}
+  _startImmediately: 1

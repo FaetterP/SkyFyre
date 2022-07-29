@@ -34,6 +34,7 @@ namespace Assets.Scripts.Enemies
             foreach (AttackPattern gun in _guns)
             {
                 gun.Init(_projectileDamage);
+                gun.gameObject.SetActive(false);
             }
         }
 
@@ -77,6 +78,14 @@ namespace Assets.Scripts.Enemies
         private void OnDestroy()
         {
             d_removeFromList(this);
+        }
+
+        protected void StartAttack()
+        {
+            foreach (AttackPattern gun in _guns)
+            {
+                gun.gameObject.SetActive(true);
+            }
         }
     }
 }
