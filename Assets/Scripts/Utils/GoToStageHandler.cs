@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Stage;
+﻿using Assets.Scripts.Gui;
+using Assets.Scripts.Stage;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ namespace Assets.Scripts.Utils
         [SerializeField] private Sprite _backgroundSlow;
         [SerializeField] private Sprite _backgroundMedium;
         [SerializeField] private Sprite _backgroundFast;
+        [SerializeField] private LoaderSceneScreen _screen;
 
         public void LoadStageScene()
         {
@@ -18,7 +20,7 @@ namespace Assets.Scripts.Utils
             LoaderBackgrounds.BackgroundMedium = _backgroundMedium;
             LoaderBackgrounds.BackgroundSlow = _backgroundSlow;
 
-            SceneManager.LoadScene((int)ScenesEnum.Stage);
+            _screen.LoadScene(ScenesEnum.Stage);
         }
     }
 }

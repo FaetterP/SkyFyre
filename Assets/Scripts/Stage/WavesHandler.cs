@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Utils;
+﻿using Assets.Scripts.Gui;
+using Assets.Scripts.Utils;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,10 +12,12 @@ namespace Assets.Scripts.Stage
 
         [SerializeField] private Wave[] _waves;
         private int _indexWave;
+        private LoaderSceneScreen _loaderSceneScreen;
 
         private void Awake()
         {
             _indexWave = 0;
+            _loaderSceneScreen = FindObjectOfType<LoaderSceneScreen>();
         }
 
         private void Start()
@@ -38,7 +41,7 @@ namespace Assets.Scripts.Stage
         private IEnumerator WaitAndGoToMenu()
         {
             yield return new WaitForSeconds(5f);
-            SceneManager.LoadScene((int)ScenesEnum.MenuStages);
+            _loaderSceneScreen.LoadScene(ScenesEnum.MenuStages);
         }
     }
 }
