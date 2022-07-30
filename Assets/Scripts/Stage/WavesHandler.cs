@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Utils;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Stage
 {
@@ -28,8 +31,14 @@ namespace Assets.Scripts.Stage
             }
             else
             {
-                Destroy(gameObject);
+                StartCoroutine(WaitAndGoToMenu());
             }
+        }
+
+        private IEnumerator WaitAndGoToMenu()
+        {
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene((int)ScenesEnum.MenuStages);
         }
     }
 }
