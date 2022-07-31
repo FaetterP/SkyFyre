@@ -148,6 +148,7 @@ MonoBehaviour:
   _projectileDamage: 0
   _guns: []
   _experience: 1
+  _explosion: {fileID: 3444099747245540209, guid: 3f40919d2af752b4ca03b1cfbb9cfe76, type: 3}
   _speed: 200
   _spawnX: 1400
 --- !u!50 &7882702602050240743

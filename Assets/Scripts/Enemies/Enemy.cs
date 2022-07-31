@@ -12,9 +12,10 @@ namespace Assets.Scripts.Enemies
     abstract class Enemy : Damageable
     {
         [SerializeField] protected int _contactDamage;
-        [SerializeField] private int _projectileDamage;
         [SerializeField] protected AttackPattern[] _guns;
         [SerializeField] protected int _experience;
+        [SerializeField] protected SelfDestroyingObject _explosion;
+        [SerializeField] private int _projectileDamage;
         protected Animator _thisAnimator;
         private EnemyArgumentFunction d_removeFromList;
         private TextCreator _textCreator;
@@ -72,6 +73,7 @@ namespace Assets.Scripts.Enemies
             {
                 gun.Destroy();
             }
+            Instantiate(_explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

@@ -282,10 +282,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 500
   _contactDamage: 20
-  _projectileDamage: 20
   _guns:
   - {fileID: 2522679309090714930}
   - {fileID: 2522679308333608009}
   - {fileID: 2522679308852981960}
   _experience: 50
+  _explosion: {fileID: 3444099747245540209, guid: 3f40919d2af752b4ca03b1cfbb9cfe76, type: 3}
+  _projectileDamage: 20
   _nextPhase: {fileID: 2563625329650257437, guid: 9b8391349da8c84479bb2bfc5974f5c7, type: 3}
+  _startImmediately: 0

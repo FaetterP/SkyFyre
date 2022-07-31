@@ -194,4 +194,5 @@ MonoBehaviour:
   _guns:
   - {fileID: 1047609046568898804}
   _experience: 8
+  _explosion: {fileID: 3444099747245540209, guid: 3f40919d2af752b4ca03b1cfbb9cfe76, type: 3}
   _timer: 10

@@ -149,6 +149,7 @@ MonoBehaviour:
   _guns:
   - {fileID: 1195047581852444873}
   _experience: 14
+  _explosion: {fileID: 3444099747245540209, guid: 3f40919d2af752b4ca03b1cfbb9cfe76, type: 3}
 --- !u!1 &1195047581852444855
 GameObject:
   m_ObjectHideFlags: 0

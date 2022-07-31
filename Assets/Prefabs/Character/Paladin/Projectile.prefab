@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 750
   _damage: 8
+  _sparks: {fileID: -7074010210669232382, guid: 7cfb5b84e7968f64aa243cf41558b602, type: 3}
 --- !u!61 &6489795579808975830
 BoxCollider2D:
   m_ObjectHideFlags: 0

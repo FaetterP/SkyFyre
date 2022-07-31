@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Enemies;
+using Assets.Scripts.Utils;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
@@ -7,6 +8,8 @@ namespace Assets.Scripts.Player
     {
         [SerializeField] private float _speed = 150;
         [SerializeField] private int _damage;
+        [SerializeField] private SelfDestroyingObject _sparks;
+
         public int Damage
         {
             get
@@ -30,6 +33,7 @@ namespace Assets.Scripts.Player
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
+                Instantiate(_sparks, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 return;
             }

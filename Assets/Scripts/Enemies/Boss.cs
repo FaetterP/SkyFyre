@@ -39,6 +39,7 @@ namespace Assets.Scripts.Enemies
                 Instantiate(_nextPhase, transform.position, Quaternion.identity).Init(d_spawnNextWave);
             }
 
+            Instantiate(_explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

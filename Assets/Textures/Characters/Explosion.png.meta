@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: -1078001729402748143
     second: MissileExplosion_11
+  - first:
+      213: 5986030973748356752
+    second: Explosion_0
+  - first:
+      213: -5600206312213581617
+    second: Explosion_1
+  - first:
+      213: 3815954189206336483
+    second: Explosion_2
+  - first:
+      213: -3690502768834906923
+    second: Explosion_3
+  - first:
+      213: -49130668184793455
+    second: Explosion_4
+  - first:
+      213: -2330519403281856691
+    second: Explosion_5
+  - first:
+      213: -4796932125324312052
+    second: Explosion_6
+  - first:
+      213: 4348620978117878488
+    second: Explosion_7
+  - first:
+      213: 7788287979965792003
+    second: Explosion_8
+  - first:
+      213: -5876230404456235001
+    second: Explosion_9
+  - first:
+      213: -7061159883300251746
+    second: Explosion_10
+  - first:
+      213: 497560801652076451
+    second: Explosion_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +175,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MissileExplosion_0
+      name: Explosion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43f7dc121efe6b500800000000000000
-      internalID: 411780166164774708
+      spriteID: 096a1cc8477a21350800000000000000
+      internalID: 5986030973748356752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_1
+      name: Explosion_1
       rect:
         serializedVersion: 2
         x: 120
@@ -174,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b754f14cd93c1210800000000000000
-      internalID: 1304981610192721847
+      spriteID: fc0fb9bb7021842b0800000000000000
+      internalID: -5600206312213581617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_2
+      name: Explosion_2
       rect:
         serializedVersion: 2
         x: 240
@@ -195,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00709b9e68233a440800000000000000
-      internalID: 4945852370811160320
+      spriteID: 3e3bec60e1ef4f430800000000000000
+      internalID: 3815954189206336483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_3
+      name: Explosion_3
       rect:
         serializedVersion: 2
         x: 360
@@ -216,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d2659ac2fc7af7d0800000000000000
-      internalID: -2883855229154663720
+      spriteID: 5d4fffce843b8ccc0800000000000000
+      internalID: -3690502768834906923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_4
+      name: Explosion_4
       rect:
         serializedVersion: 2
         x: 480
@@ -237,14 +273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670db6ebb1fb4d5f0800000000000000
-      internalID: -732750713474789258
+      spriteID: 19e8447eae3715ff0800000000000000
+      internalID: -49130668184793455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_5
+      name: Explosion_5
       rect:
         serializedVersion: 2
         x: 600
@@ -258,14 +294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef9d86eedb74c180800000000000000
-      internalID: -9096009150100561950
+      spriteID: d47ca3943f458afd0800000000000000
+      internalID: -2330519403281856691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_6
+      name: Explosion_6
       rect:
         serializedVersion: 2
         x: 720
@@ -279,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb8910cf43b99ab0800000000000000
-      internalID: -5000768756111537174
+      spriteID: c028262b5afdd6db0800000000000000
+      internalID: -4796932125324312052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_7
+      name: Explosion_7
       rect:
         serializedVersion: 2
         x: 840
@@ -300,14 +336,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f9adb876bed73a00800000000000000
-      internalID: 736301939389475318
+      spriteID: 8d227875db7695c30800000000000000
+      internalID: 4348620978117878488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_8
+      name: Explosion_8
       rect:
         serializedVersion: 2
         x: 960
@@ -321,14 +357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa987d2ccc4f54340800000000000000
-      internalID: 4847549734213618090
+      spriteID: 30f3e4657ae851c60800000000000000
+      internalID: 7788287979965792003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_9
+      name: Explosion_9
       rect:
         serializedVersion: 2
         x: 1080
@@ -342,14 +378,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5f4146e8125f5890800000000000000
-      internalID: -7467159390261260452
+      spriteID: 700490ca49f637ea0800000000000000
+      internalID: -5876230404456235001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_10
+      name: Explosion_10
       rect:
         serializedVersion: 2
         x: 1200
@@ -363,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1956aa60af4f1e290800000000000000
-      internalID: -7862734119721343599
+      spriteID: e9756ad6f78b10e90800000000000000
+      internalID: -7061159883300251746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MissileExplosion_11
+      name: Explosion_11
       rect:
         serializedVersion: 2
         x: 1320
@@ -384,8 +420,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11341bb732b2a01f0800000000000000
-      internalID: -1078001729402748143
+      spriteID: 3af61a4b9e0b7e600800000000000000
+      internalID: 497560801652076451
       vertices: []
       indices: 
       edges: []
