@@ -10,13 +10,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private int _damage;
         [SerializeField] private SelfDestroyingObject _sparks;
 
-        public int Damage
-        {
-            get
-            {
-                return _damage;
-            }
-        }
+        public int Damage => _damage;
 
         private void OnBecameInvisible()
         {

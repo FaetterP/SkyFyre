@@ -20,13 +20,7 @@ namespace Assets.Scripts.Enemies
         private EnemyArgumentFunction d_removeFromList;
         private TextCreator _textCreator;
 
-        public int ContactDamage
-        {
-            get
-            {
-                return _contactDamage;
-            }
-        }
+        public int ContactDamage => _contactDamage;
 
         protected void Awake()
         {

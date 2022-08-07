@@ -11,13 +11,7 @@ namespace Assets.Scripts.Enemies
         private List<EnemyProjectile> _list;
         private float _speed;
 
-        public int ContactDamage
-        {
-            get
-            {
-                return _contactDamage;
-            }
-        }
+        public int ContactDamage => _contactDamage;
 
         public void Init(List<EnemyProjectile> list, int damage, float speed)
         {
