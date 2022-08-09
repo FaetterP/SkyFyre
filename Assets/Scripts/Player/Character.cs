@@ -7,14 +7,18 @@ using UnityEngine;
 namespace Assets.Scripts.Player
 {
     [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(AudioSource))]
     class Character : Damageable
     {
         [SerializeField] private Transform _projectileSpawn;
         [SerializeField] private PlayerProjectile _projectile;
         [SerializeField] private float _shotsPerSecond = 10;
-        [SerializeField] HealthBar _healthBar;
+        [SerializeField] private HealthBar _healthBar;
+        [SerializeField] private AudioClip _shotSound;
+        [SerializeField] private AudioClip _hitSound;
         private Animator _thisAnimator;
         private TextCreator _textCreator;
+        private AudioSource _thisAudioSource;
 
         private float _delay;
         private float _currentDelay;
@@ -22,6 +26,7 @@ namespace Assets.Scripts.Player
         private void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
+            _thisAudioSource = GetComponent<AudioSource>();
             _delay = 1 / _shotsPerSecond;
             _textCreator = FindObjectOfType<TextCreator>();
             _healthBar.Init(_health);
@@ -70,6 +75,7 @@ namespace Assets.Scripts.Player
 
         protected override void OnDamage()
         {
+            _thisAudioSource.PlayOneShot(_hitSound);
             _thisAnimator.SetBool("isDamaged", true);
             StartCoroutine(DisableAnimation());
         }
@@ -93,6 +99,7 @@ namespace Assets.Scripts.Player
             }
             else if (Input.GetKey(KeyCode.Mouse0) || Input.touchCount > 0)
             {
+                _thisAudioSource.PlayOneShot(_shotSound);
                 _currentDelay = _delay;
                 Instantiate(_projectile, _projectileSpawn.position, Quaternion.identity);
             }

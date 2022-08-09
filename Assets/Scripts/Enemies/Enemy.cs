@@ -9,6 +9,7 @@ using static Assets.Scripts.Utils.Delegates;
 namespace Assets.Scripts.Enemies
 {
     [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(AudioSource))]
     abstract class Enemy : Damageable
     {
         [SerializeField] protected int _contactDamage;
@@ -16,7 +17,9 @@ namespace Assets.Scripts.Enemies
         [SerializeField] protected int _experience;
         [SerializeField] protected SelfDestroyingObject _explosion;
         [SerializeField] private int _projectileDamage;
+        [SerializeField] private AudioClip _hitSound;
         protected Animator _thisAnimator;
+        protected AudioSource _thisAudioSource;
         private EnemyArgumentFunction d_removeFromList;
         private TextCreator _textCreator;
 
@@ -25,6 +28,7 @@ namespace Assets.Scripts.Enemies
         protected void Awake()
         {
             _thisAnimator = GetComponent<Animator>();
+            _thisAudioSource = GetComponent<AudioSource>();
             _textCreator = FindObjectOfType<TextCreator>();
             foreach (AttackPattern gun in _guns)
             {
@@ -44,6 +48,7 @@ namespace Assets.Scripts.Enemies
             if (projectile != null)
             {
                 _textCreator.Create(transform.position, projectile.Damage);
+                _thisAudioSource.PlayOneShot(_hitSound);
                 ApplyDamage(projectile.Damage);
                 return;
             }
