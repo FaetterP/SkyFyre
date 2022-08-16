@@ -148,6 +148,7 @@ MonoBehaviour:
   _contactDamage: 5
   _guns: []
   _experience: 2
+  _drop: {fileID: 7513776973234170760, guid: 3cf2389f192157a409288b5faad5c875, type: 3}
   _explosion: {fileID: 3444099747245540209, guid: 3f40919d2af752b4ca03b1cfbb9cfe76, type: 3}
   _projectileDamage: 0
   _hitSound: {fileID: 8300000, guid: ded80cc4e83027d49b9e6e56f17bf648, type: 3}

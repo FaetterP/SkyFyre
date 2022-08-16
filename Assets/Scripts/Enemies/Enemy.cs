@@ -15,6 +15,7 @@ namespace Assets.Scripts.Enemies
         [SerializeField] protected int _contactDamage;
         [SerializeField] protected AttackPattern[] _guns;
         [SerializeField] protected int _experience;
+        [SerializeField] protected GameObject _drop;
         [SerializeField] protected SelfDestroyingObject _explosion;
         [SerializeField] private int _projectileDamage;
         [SerializeField] private AudioClip _hitSound;
@@ -71,6 +72,10 @@ namespace Assets.Scripts.Enemies
             foreach (AttackPattern gun in _guns)
             {
                 gun.Destroy();
+            }
+            if (_drop != null)
+            {
+                Instantiate(_drop, transform.position, Quaternion.identity);
             }
             Instantiate(_explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);

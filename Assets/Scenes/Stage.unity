@@ -1922,50 +1922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1418701681, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Size.x
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418701681, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Size.y
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418701681, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418701681, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418701682, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1228670894109841772, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3169190417004794304, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: _health
-      value: 8000
-      objectReference: {fileID: 0}
     - target: {fileID: 3169190417004794304, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
       propertyPath: _healthBar
       value: 
       objectReference: {fileID: 2114609277}
-    - target: {fileID: 3169190417004794304, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: _shotSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fdf242d3f87515a4bb7ccf1510d2fc39, type: 3}
-    - target: {fileID: 3169190417004794304, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: _damageSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a7fd26333162e2548aca2200c97db8e2, type: 3}
-    - target: {fileID: 3169190417004794304, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: _shotsPerSecond
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3169190417004794305, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
       propertyPath: m_Name
       value: Paladin
@@ -1973,14 +1933,6 @@ PrefabInstance:
     - target: {fileID: 3169190417004794306, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3169190417004794306, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 3169190417004794306, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 3169190417004794306, guid: 32dd00cb1fe57df4e940bf7b73198709, type: 3}
       propertyPath: m_LocalPosition.x

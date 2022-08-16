@@ -2,14 +2,9 @@
 
 namespace Assets.Scripts.Drops
 {
-    class Coin : MonoBehaviour
+    class Coin : MoneyDrop
     {
         [SerializeField] private float _speed;
-
-        private void OnBecameInvisible()
-        {
-            Destroy(gameObject);
-        }
 
         private void Update()
         {
