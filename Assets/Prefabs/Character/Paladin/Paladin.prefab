@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 1418701682}
   - component: {fileID: 1418701681}
   - component: {fileID: 1228670894109841772}
+  - component: {fileID: 6179151201334978895}
   m_Layer: 0
   m_Name: Paladin
   m_TagString: Untagged
@@ -259,11 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 8000
-  _projectileSpawn: {fileID: 8121050909421772911}
-  _projectile: {fileID: 6489795579808975825, guid: da7ff6a73ce9b934d82f4054f2d70037, type: 3}
-  _shotsPerSecond: 10
   _healthBar: {fileID: 0}
-  _shotSound: {fileID: 8300000, guid: fdf242d3f87515a4bb7ccf1510d2fc39, type: 3}
   _hitSound: {fileID: 8300000, guid: a7fd26333162e2548aca2200c97db8e2, type: 3}
 --- !u!95 &3169190417004794301
 Animator:
@@ -427,6 +424,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6179151201334978895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169190417004794305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b726a548c25fc2418b4ef3a9d5d9de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shotsPerSecond: 10
+  _shotSound: {fileID: 8300000, guid: fdf242d3f87515a4bb7ccf1510d2fc39, type: 3}
+  _mainGunPosition: {fileID: 8121050909421772911}
+  _mainGun: {fileID: 4264102819674882479, guid: 12c3cd3d0e9960d4ca54d86ec4418ffc, type: 3}
+  _bulletGun: {fileID: 2766359333375655993, guid: d5265a6f54070444ab4dc61f3ddca423, type: 3}
+  _missleGun: {fileID: 8171134791355958006, guid: 371e216a62000d046897e94c83bae97d, type: 3}
+  _mainGunPowered: {fileID: 4264102819674882479, guid: 822ecaec83e7eaa47b0d5c543b074d3b, type: 3}
 --- !u!1 &7590553535934475308
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8121050909421772911}
   m_Layer: 0
-  m_Name: ProjectileSpawn
+  m_Name: MainGunPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

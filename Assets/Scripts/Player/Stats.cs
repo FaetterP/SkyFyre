@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.Player
+﻿using System.Collections.Generic;
+
+namespace Assets.Scripts.Player
 {
     class Stats
     {
@@ -11,7 +13,7 @@
             s_money += value;
         }
 
-        public static bool RemoveMoney(int value)
+        public static bool TryRemoveMoney(int value)
         {
             if (s_money < value)
                 return false;
