@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Assets.Scripts.Player.Upgrades
 {
@@ -7,9 +6,13 @@ namespace Assets.Scripts.Player.Upgrades
     {
         public int Cost => 400;
 
-        public List<IUpgrade> GetBlockedUpgrades()
+        public List<UpgradesType> GetBlockedUpgrades()
         {
-            return new List<IUpgrade>();
+            return new List<UpgradesType>() {
+                UpgradesType.Turret1,
+                UpgradesType.Turret2,
+                UpgradesType.Turret3
+            };
         }
     }
 }

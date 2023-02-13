@@ -4,7 +4,7 @@ namespace Assets.Scripts.Player.Upgrades
 {
     interface IUpgrade
     {
-        public List<IUpgrade> GetBlockedUpgrades();
+        public List<UpgradesType> GetBlockedUpgrades();
         public int Cost { get; }
     }
 }
