@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player
         [Header("Gun Prefabs")]
         [SerializeField] private Gun _mainGun;
         [SerializeField] private Gun _bulletGun;
-        [SerializeField] private Gun _missleGun;
+        [SerializeField] private Gun _missileGun;
         [SerializeField] private Gun _mainGunPowered;
 
         private List<Gun> _guns;
@@ -31,9 +31,21 @@ namespace Assets.Scripts.Player
 
         private void Start()
         {
-            if (UpgradesController.IsContainsUpgrade(UpgradesType.Turret1))
+            if (Inventory.IsContainsUpgrade(UpgradesType.Turret1))
             {
                 ApplyTurrets1();
+            }
+            if (Inventory.IsContainsUpgrade(UpgradesType.Turret2))
+            {
+                ApplyTurrets2();
+            }
+            if (Inventory.IsContainsUpgrade(UpgradesType.Turret3))
+            {
+                ApplyTurrets3();
+            }
+            if (Inventory.IsContainsUpgrade(UpgradesType.EnhanceTurrets))
+            {
+                ApplyTurrets4();
             }
         }
 
@@ -75,11 +87,11 @@ namespace Assets.Scripts.Player
         public void ApplyTurrets3()
         {
             ApplyTurrets2();
-            _guns.Add(Instantiate(_missleGun, _mainGunPosition.position + new Vector3(-50, 0), Quaternion.identity, transform));
+            _guns.Add(Instantiate(_missileGun, _mainGunPosition.position + new Vector3(-50, 0), Quaternion.identity, transform));
         }
+
         public void ApplyTurrets4()
         {
-            ApplyTurrets3();
             _guns.RemoveAt(0);
             _guns.Add(Instantiate(_mainGunPowered, _mainGunPosition.position + new Vector3(50, 0), Quaternion.identity, transform));
         }

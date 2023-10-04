@@ -8,36 +8,38 @@ namespace Assets.Scripts.Gui.Menu.Shop
     [RequireComponent(typeof(Image))]
     class ShopItem : MonoBehaviour
     {
-        [SerializeField] private UpgradesType _upgrade;
+        [SerializeField] private Upgrade _upgrade;
 
-        public UpgradesType UpgradeType => _upgrade;
+        public Upgrade Upgrade => _upgrade;
 
-        private Image _thisSpriteRenderer;
+        private Image _thisImage;
         private bool _isBlocked;
 
         private void Awake()
         {
-            _thisSpriteRenderer = GetComponent<Image>();
+            _thisImage = GetComponent<Image>();
+
+            _thisImage.sprite = _upgrade.Icon;
         }
 
         private void OnMouseDown()
         {
             if (_isBlocked == false)
             {
-                UpgradesController.AddUpgrade(_upgrade);
+                Inventory.AddUpgrade(_upgrade);
             }
         }
 
         public void Disable()
         {
             _isBlocked = true;
-            _thisSpriteRenderer.color = new Color(1, 1, 1, 0.5f);
+            _thisImage.color = new Color(1, 1, 1, 0.5f);
         }
 
         public void Enable()
         {
             _isBlocked = false;
-            _thisSpriteRenderer.color = new Color(1, 1, 1, 1);
+            _thisImage.color = new Color(1, 1, 1, 1);
         }
     }
 }

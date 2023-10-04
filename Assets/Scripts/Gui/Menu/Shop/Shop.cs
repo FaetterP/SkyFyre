@@ -5,22 +5,22 @@ using UnityEngine;
 
 namespace Assets.Scripts.Gui.Menu.Shop
 {
-    class ShopController : MonoBehaviour
+    class Shop : MonoBehaviour
     {
         [SerializeField] private ShopItem[] _shopItems;
 
         private void Awake()
         {
-            UpgradesController.onBuyItem.AddListener(ResolveShopItems);
+            Inventory.onItemsChanged.AddListener(ResolveShopItems);
         }
 
-        public void ResolveShopItems(UpgradesType a)
+        public void ResolveShopItems(IReadOnlyCollection<Upgrade> upgrades)
         {
-            List<UpgradesType> blockedTypes = UpgradesController.GetBlockedUpgrades();
+            List<UpgradesType> blockedTypes = Inventory.GetBlockedUpgrades();
 
             foreach (var t in _shopItems)
             {
-                if (blockedTypes.Contains(t.UpgradeType))
+                if (blockedTypes.Contains(t.Upgrade.Type))
                 {
                     t.Disable();
                 }
