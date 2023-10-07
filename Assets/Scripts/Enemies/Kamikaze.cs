@@ -31,7 +31,7 @@ namespace Assets.Scripts.Enemies
             transform.position = new Vector2(x, FindY(x));
             if (transform.position.x < -1000)
             {
-                Destroy(gameObject);
+                FinishTrace();
             }
         }
 

@@ -4,7 +4,7 @@ using Assets.Scripts.Player;
 using Assets.Scripts.Utils;
 using System.Collections;
 using UnityEngine;
-using static Assets.Scripts.Utils.Delegates;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Enemies
 {
@@ -21,8 +21,9 @@ namespace Assets.Scripts.Enemies
         [SerializeField] private AudioClip _hitSound;
         protected Animator _thisAnimator;
         protected AudioSource _thisAudioSource;
-        private EnemyArgumentFunction d_removeFromList;
         private TextCreator _textCreator;
+        private UnityEvent<Enemy, Enemy> e_onDeath = new UnityEvent<Enemy, Enemy>();
+        private UnityEvent<Enemy> e_onEndTrace = new UnityEvent<Enemy>();
 
         public int ContactDamage => _contactDamage;
 
@@ -38,9 +39,24 @@ namespace Assets.Scripts.Enemies
             }
         }
 
-        public void Init(EnemyArgumentFunction removeFromList)
+        public void OnDeathAddListener(UnityAction<Enemy, Enemy> callback)
         {
-            d_removeFromList = removeFromList;
+            e_onDeath.AddListener(callback);
+        }
+
+        public void OnDeathRemoveListener(UnityAction<Enemy, Enemy> callback)
+        {
+            e_onDeath.RemoveListener(callback);
+        }
+
+        public void OnEndTraceAddListener(UnityAction<Enemy> callback)
+        {
+            e_onEndTrace.AddListener(callback);
+        }
+
+        public void OnEndTraceRemoveListener(UnityAction<Enemy> callback)
+        {
+            e_onEndTrace.RemoveListener(callback);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -61,7 +77,12 @@ namespace Assets.Scripts.Enemies
             StartCoroutine(DisableAnimation());
         }
 
-        IEnumerator DisableAnimation()
+        protected void InvokeOnDeath(Enemy nextPhase)
+        {
+            e_onDeath.Invoke(this, nextPhase);
+        }
+
+        private IEnumerator DisableAnimation()
         {
             yield return new WaitForSeconds(0.05f);
             _thisAnimator.SetBool("isDamaged", false);
@@ -78,12 +99,15 @@ namespace Assets.Scripts.Enemies
                 Instantiate(_drop, transform.position, Quaternion.identity);
             }
             Instantiate(_explosion, transform.position, Quaternion.identity);
+
+            e_onDeath.Invoke(this, null);
             Destroy(gameObject);
         }
 
-        private void OnDestroy()
+        protected void FinishTrace()
         {
-            d_removeFromList(this);
+            e_onEndTrace.Invoke(this);
+            Destroy(gameObject);
         }
 
         protected void StartAttack()

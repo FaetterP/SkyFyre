@@ -1,59 +1,14 @@
-﻿using Assets.Scripts.Enemies;
 using System.Collections.Generic;
+using Assets.Scripts.Enemies;
 using UnityEngine;
-using static Assets.Scripts.Utils.Delegates;
 
 namespace Assets.Scripts.Stage
 {
-    class Wave : MonoBehaviour
+    [CreateAssetMenu(menuName = "Game/Wave")]
+    class Wave : ScriptableObject
     {
         [SerializeField] private List<Enemy> _enemies;
-        private List<Enemy> _spawnedEnemies;
-        private EmptyArgumentFunction _spawnNextWave;
 
-        private void Awake()
-        {
-            _spawnedEnemies = new List<Enemy>();
-        }
-
-        public void Init(EmptyArgumentFunction spawnNextWave)
-        {
-            _spawnNextWave = spawnNextWave;
-        }
-
-        private void Start()
-        {
-            foreach (Enemy enemy in _enemies)
-            {
-                Enemy spawned = Instantiate(enemy);
-                if (spawned is Boss)
-                {
-                    (spawned as Boss).Init(SpawnNextWave);
-                }
-                else
-                {
-                    spawned.Init(RemoveFromList);
-                }
-                _spawnedEnemies.Add(spawned);
-            }
-        }
-
-        private void RemoveFromList(Enemy enemy)
-        {
-            _spawnedEnemies.Remove(enemy);
-
-            if (_spawnedEnemies.Count == 0)
-            {
-                _spawnNextWave();
-                Destroy(gameObject);
-            }
-        }
-
-        private void SpawnNextWave()
-        {
-            _spawnNextWave();
-            Destroy(gameObject);
-
-        }
+        public IReadOnlyCollection<Enemy> Enemies => _enemies.AsReadOnly();
     }
 }

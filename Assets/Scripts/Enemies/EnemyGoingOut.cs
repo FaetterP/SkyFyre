@@ -23,7 +23,7 @@ namespace Assets.Scripts.Enemies
 
         private void OnWentOut()
         {
-            Destroy(gameObject);
+            FinishTrace();
         }
     }
 }

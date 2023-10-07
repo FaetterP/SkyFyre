@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Enemies.AttackPatterns;
+using Assets.Scripts.Stage;
 using UnityEngine;
 using static Assets.Scripts.Utils.Delegates;
 
@@ -8,20 +9,6 @@ namespace Assets.Scripts.Enemies
     {
         [SerializeField] private Boss _nextPhase;
         [SerializeField] private bool _startImmediately;
-        private EmptyArgumentFunction d_spawnNextWave;
-
-        private void Start()
-        {
-            if (_startImmediately)
-            {
-                StartAttack();
-            }
-        }
-
-        public void Init(EmptyArgumentFunction spawnNexWave)
-        {
-            d_spawnNextWave = spawnNexWave;
-        }
 
         protected override void OnDeath()
         {
@@ -32,17 +19,24 @@ namespace Assets.Scripts.Enemies
 
             if (_nextPhase == null)
             {
-                d_spawnNextWave();
+                InvokeOnDeath(null);
             }
             else
             {
-                Instantiate(_nextPhase, transform.position, Quaternion.identity).Init(d_spawnNextWave);
+                Boss nextPhase = Instantiate(_nextPhase, transform.position, Quaternion.identity);
+                InvokeOnDeath(nextPhase);
             }
 
             Instantiate(_explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
-        private void OnDestroy() { }
+        private void Start()
+        {
+            if (_startImmediately)
+            {
+                StartAttack();
+            }
+        }
     }
 }

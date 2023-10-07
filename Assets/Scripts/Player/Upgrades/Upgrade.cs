@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player.Upgrades
 
         public int Cost => _cost;
         public Sprite Icon => _icon;
-        public List<UpgradesType> GetBlockedUpgrades() => _blockedUpgrades;
+        public IReadOnlyCollection<UpgradesType> BlockedUpgrades => _blockedUpgrades.AsReadOnly();
         public UpgradesType Type => _type;
     }
 }

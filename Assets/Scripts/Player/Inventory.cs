@@ -54,7 +54,7 @@ namespace Assets.Scripts.Player
             List<UpgradesType> ret = new List<UpgradesType>();
             foreach (Upgrade upgrade in s_upgrades)
             {
-                ret.AddRange(upgrade.GetBlockedUpgrades());
+                ret.AddRange(upgrade.BlockedUpgrades);
             }
             return ret;
         }
